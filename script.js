@@ -29,6 +29,9 @@ function calculateTotal() {
   document.getElementById("tax-amount").innerText = tax;
   document.getElementById("total-price").innerText = totalPrice;
 }
+function removeSection(inputId) {
+  document.getElementById(inputId).style.display = "none";
+}
 document
   .getElementById("phone-plus-btn")
   .addEventListener("click", function () {
@@ -47,3 +50,9 @@ document
   .addEventListener("click", function () {
     productUpdate("case", 59, false);
   });
+document.getElementById("first-btn").addEventListener("click", function () {
+  removeSection("first");
+});
+document.getElementById("second-btn").addEventListener("click", function () {
+  removeSection("second");
+});
